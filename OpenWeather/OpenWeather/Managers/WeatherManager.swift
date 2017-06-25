@@ -18,13 +18,21 @@ class WeatherManager: NSObject {
         super.init()
         self.serviceManager = serviceManager
     }
+    
+    // Parsing methods
+    
+    // parse current weather
 
+    // parse weather Forecast
+    
+    
+    
     //	Retrieve the current weather – “/weather?q=Mumbai,IN&APPID=APIKEY”
     func fetchCurrentWeather() {
         
         let parameters:[String:AnyObject] = [
             "q":"Mumbai,IN" as AnyObject,
-            "APPID":"a761e33f55472adc699fdaafb87c4dd8" as AnyObject
+            "appid":apiKey as AnyObject
         ]
         
         let path = "weather"
@@ -44,7 +52,7 @@ class WeatherManager: NSObject {
         let parameters:[String:AnyObject] = [
             "q":"Mumbai,IN" as AnyObject,
             "cnt":7 as AnyObject,
-            "APPID":"a761e33f55472adc699fdaafb87c4dd8" as AnyObject
+            "appid":"a761e33f55472adc699fdaafb87c4dd8" as AnyObject
         ]
         
         let path = "forecast/daily"
