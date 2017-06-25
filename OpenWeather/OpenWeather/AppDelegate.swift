@@ -41,6 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    private func setupAppContext() {
+        let cc = ApplicationContext()
+        ApplicationContext.currentContext = cc
+        
+        cc.serviceManager = ServiceManager()
+        cc.weatherManager = WeatherManager(serviceManager: cc.serviceManager!)
+    }
 
 }
 
