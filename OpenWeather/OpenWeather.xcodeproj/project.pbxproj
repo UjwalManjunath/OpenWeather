@@ -18,6 +18,9 @@
 		2DF35D4A1F003A3000C610C5 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF35D491F003A3000C610C5 /* Weather.swift */; };
 		2DF35D4C1F003A3D00C610C5 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF35D4B1F003A3D00C610C5 /* Forecast.swift */; };
 		2DF35D4E1F00412C00C610C5 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF35D4D1F00412C00C610C5 /* ApplicationContext.swift */; };
+		2DF35D511F00DFC100C610C5 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF35D4F1F00DFC100C610C5 /* ForecastCell.swift */; };
+		2DF35D521F00DFC100C610C5 /* ForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF35D501F00DFC100C610C5 /* ForecastCell.xib */; };
+		2DF35D541F00DFE500C610C5 /* UICollectionViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF35D531F00DFE500C610C5 /* UICollectionViewUtility.swift */; };
 		3FE9CAEE28FC6C9D4C955818 /* Pods_OpenWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAAA0D5033D033054D92338 /* Pods_OpenWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,9 @@
 		2DF35D491F003A3000C610C5 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		2DF35D4B1F003A3D00C610C5 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		2DF35D4D1F00412C00C610C5 /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
+		2DF35D4F1F00DFC100C610C5 /* ForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
+		2DF35D501F00DFC100C610C5 /* ForecastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForecastCell.xib; sourceTree = "<group>"; };
+		2DF35D531F00DFE500C610C5 /* UICollectionViewUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewUtility.swift; sourceTree = "<group>"; };
 		4FAAA0D5033D033054D92338 /* Pods_OpenWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +103,8 @@
 				2DF35D411F00347300C610C5 /* Dashboard.storyboard */,
 				2DF35D431F0034A500C610C5 /* WeatherController.swift */,
 				2DF35D451F0034B200C610C5 /* WeatherForecastController.swift */,
+				2DF35D4F1F00DFC100C610C5 /* ForecastCell.swift */,
+				2DF35D501F00DFC100C610C5 /* ForecastCell.xib */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 		2DF35D391EFF92D700C610C5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2DF35D531F00DFE500C610C5 /* UICollectionViewUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -208,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF35D521F00DFC100C610C5 /* ForecastCell.xib in Resources */,
 				2DF35D2F1EFF8A4900C610C5 /* LaunchScreen.storyboard in Resources */,
 				2DF35D421F00347300C610C5 /* Dashboard.storyboard in Resources */,
 				2DF35D2C1EFF8A4900C610C5 /* Assets.xcassets in Resources */,
@@ -273,6 +283,8 @@
 				2DF35D461F0034B200C610C5 /* WeatherForecastController.swift in Sources */,
 				2DF35D4C1F003A3D00C610C5 /* Forecast.swift in Sources */,
 				2DF35D251EFF8A4900C610C5 /* AppDelegate.swift in Sources */,
+				2DF35D511F00DFC100C610C5 /* ForecastCell.swift in Sources */,
+				2DF35D541F00DFE500C610C5 /* UICollectionViewUtility.swift in Sources */,
 				2DF35D4E1F00412C00C610C5 /* ApplicationContext.swift in Sources */,
 				2DF35D441F0034A500C610C5 /* WeatherController.swift in Sources */,
 				2DF35D4A1F003A3000C610C5 /* Weather.swift in Sources */,

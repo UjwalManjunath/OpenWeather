@@ -57,6 +57,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Forecast" id="1y9-hH-JTV"/>
+                    <connections>
+                        <outlet property="collectionView" destination="74u-6A-aGi" id="PZp-R2-nRq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRL-mC-9hX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
