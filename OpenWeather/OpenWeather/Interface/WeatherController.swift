@@ -50,14 +50,14 @@ class WeatherController: UIViewController {
             return
         }
         
-        self.descriptionLabel.text = weather.weatherDescription
+        self.descriptionLabel.text = weather.weatherDescription?.capitalized
         
-        self.temperatureLabel.text = "\(String(describing: weather.temperature))"
-        self.tempMaxLabel.text = "\(String(describing: weather.tempMax))"
-        self.tempMinLabel.text = "\(String(describing: weather.tempMin))"
+        self.temperatureLabel.text = weather.temperatureInFahrenheit() + "\u{00B0}"
+        self.tempMaxLabel.text = "High : " + weather.tempMaxInFahrenheit()
+        self.tempMinLabel.text = " Low : " + weather.tempMinInFahrenheit()
         
-        self.pressureLabel.text = "\(String(describing: weather.pressure))"
-        self.humidityLabel.text = "\(String(describing: weather.humidity))"
+        self.pressureLabel.text = "Pressure : \(weather.pressure!) hPa"
+        self.humidityLabel.text = "Humidity : \(weather.humidity!)%"
     }
 
     @IBAction func didTapOnShareButton(_ sender: UIBarButtonItem) {

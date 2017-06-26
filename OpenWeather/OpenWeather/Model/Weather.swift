@@ -47,9 +47,19 @@ class Weather: NSObject {
         tempMin = newTempMin
     }
     
-    func temperatureInFahrenheit() -> Float {
-        return temperature! * (9.0/5.0) - 459.67
+    func temperatureInFahrenheit() -> String {
+        return "\(convertToFahrenheit(tempInKelvin: temperature!))"
     }
     
+    func tempMaxInFahrenheit() -> String {
+        return "\(convertToFahrenheit(tempInKelvin: tempMax!))"
+    }
     
+    func tempMinInFahrenheit() -> String {
+        return "\(convertToFahrenheit(tempInKelvin: tempMin!))"
+    }
+    
+    func convertToFahrenheit(tempInKelvin:Float) -> Float {
+        return tempInKelvin * (9.0/5.0) - 459.67
+    }
 }
