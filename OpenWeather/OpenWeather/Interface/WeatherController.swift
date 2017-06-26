@@ -10,6 +10,8 @@ import UIKit
 
 class WeatherController: UIViewController {
 
+    @IBOutlet weak var loadingView: UIView!
+    
     @IBOutlet weak var tempMinLabel: UILabel!
     @IBOutlet weak var tempMaxLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
@@ -18,6 +20,18 @@ class WeatherController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     
     var weather:Weather?
+    
+    var isFetching:Bool = false {
+        didSet {
+            UIView.animate(withDuration: 0.25) { 
+                if self.isFetching  {
+                    self.loadingView.alpha = 1.0
+                } else {
+                    self.loadingView.alpha = 0.0
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,17 +44,20 @@ class WeatherController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     func fetchCurrentWeather() {
         
+        isFetching = true
         ApplicationContext.currentContext?.weatherManager?.fetchCurrentWeather(success: { (weather) in
             
             self.weather = weather as? Weather
             
             self.updateUI()
-            
+            self.isFetching = false
         }, failure: { (error) in
             print("Error: \(String(describing: error?.localizedDescription))")
+            self.isFetching = false
         })
     }
     

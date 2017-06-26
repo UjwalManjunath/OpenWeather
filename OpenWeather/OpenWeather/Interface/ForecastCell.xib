@@ -50,6 +50,7 @@
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="laa-Bz-bcL" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="09G-D8-fPk"/>
                 <constraint firstItem="RSc-pI-9Oc" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="5lY-F9-eFn"/>

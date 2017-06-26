@@ -29,9 +29,13 @@
                                     <navigationItem title="Mumbai, IN" id="qbd-f1-ZJg"/>
                                 </items>
                             </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Yg2-Ct-YFR">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="74u-6A-aGi">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5ge-Ro-v8C">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -47,8 +51,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Yg2-Ct-YFR" firstAttribute="centerX" secondItem="kLU-BE-38y" secondAttribute="centerX" id="3Zq-jF-vfQ"/>
                             <constraint firstAttribute="trailing" secondItem="74u-6A-aGi" secondAttribute="trailing" id="AfG-wh-0CC"/>
                             <constraint firstItem="74u-6A-aGi" firstAttribute="top" secondItem="wRT-mz-1CL" secondAttribute="bottom" id="DHi-Og-N6E"/>
+                            <constraint firstItem="Yg2-Ct-YFR" firstAttribute="centerY" secondItem="kLU-BE-38y" secondAttribute="centerY" id="EwZ-bu-Sah"/>
                             <constraint firstItem="I1Y-lz-7rm" firstAttribute="top" secondItem="74u-6A-aGi" secondAttribute="bottom" id="HAJ-kE-1BQ"/>
                             <constraint firstItem="wRT-mz-1CL" firstAttribute="top" secondItem="URs-Kg-jXU" secondAttribute="bottom" constant="-20" id="hed-a0-Q7i"/>
                             <constraint firstAttribute="trailing" secondItem="wRT-mz-1CL" secondAttribute="trailing" id="lpo-4r-d9Y"/>
@@ -59,6 +65,7 @@
                     <tabBarItem key="tabBarItem" title="Forecast" id="1y9-hH-JTV"/>
                     <connections>
                         <outlet property="collectionView" destination="74u-6A-aGi" id="PZp-R2-nRq"/>
+                        <outlet property="loadingView" destination="Yg2-Ct-YFR" id="Sqi-Xs-IG5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRL-mC-9hX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -128,6 +135,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVX-mp-m3f">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jnx-3Z-BVX">
+                                        <rect key="frame" x="177.5" y="289" width="20" height="20"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Jnx-3Z-BVX" firstAttribute="centerY" secondItem="tVX-mp-m3f" secondAttribute="centerY" id="d28-uZ-Ju2"/>
+                                    <constraint firstItem="Jnx-3Z-BVX" firstAttribute="centerX" secondItem="tVX-mp-m3f" secondAttribute="centerX" id="lcc-iD-hQG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -137,7 +158,10 @@
                             <constraint firstItem="0Lz-Sc-2Hm" firstAttribute="top" secondItem="vXP-XQ-fBg" secondAttribute="bottom" constant="-20" id="Iij-7d-AlY"/>
                             <constraint firstItem="g7s-EH-5VF" firstAttribute="top" secondItem="UdJ-6X-OqH" secondAttribute="bottom" constant="10" id="P3P-Zu-sod"/>
                             <constraint firstItem="GDJ-Eo-OcK" firstAttribute="leading" secondItem="5tp-5r-hgB" secondAttribute="leading" constant="20" id="PWB-jV-eFC"/>
+                            <constraint firstItem="rp2-7B-4A9" firstAttribute="top" secondItem="tVX-mp-m3f" secondAttribute="bottom" id="Whk-ie-UU6"/>
+                            <constraint firstAttribute="trailing" secondItem="tVX-mp-m3f" secondAttribute="trailing" id="YAm-Fd-Lgb"/>
                             <constraint firstAttribute="trailing" secondItem="kIb-3T-kOh" secondAttribute="trailing" constant="20" id="ZA3-T8-1AF"/>
+                            <constraint firstItem="tVX-mp-m3f" firstAttribute="leading" secondItem="5tp-5r-hgB" secondAttribute="leading" id="alO-7r-WLf"/>
                             <constraint firstAttribute="trailing" secondItem="UdJ-6X-OqH" secondAttribute="trailing" constant="20" id="bG6-Uq-tWx"/>
                             <constraint firstItem="0tm-qR-2SK" firstAttribute="leading" secondItem="5tp-5r-hgB" secondAttribute="leading" constant="20" id="edH-cD-OX4"/>
                             <constraint firstItem="kIb-3T-kOh" firstAttribute="top" secondItem="0Lz-Sc-2Hm" secondAttribute="bottom" constant="10" id="fKO-dg-vpy"/>
@@ -148,6 +172,7 @@
                             <constraint firstItem="UdJ-6X-OqH" firstAttribute="top" secondItem="ZiS-FA-obk" secondAttribute="bottom" constant="15" id="pI9-Gt-oPN"/>
                             <constraint firstItem="g7s-EH-5VF" firstAttribute="leading" secondItem="5tp-5r-hgB" secondAttribute="leading" constant="20" id="ptA-bJ-j2g"/>
                             <constraint firstAttribute="trailing" secondItem="GDJ-Eo-OcK" secondAttribute="trailing" constant="20" id="suB-7p-bO3"/>
+                            <constraint firstItem="tVX-mp-m3f" firstAttribute="top" secondItem="vXP-XQ-fBg" secondAttribute="bottom" id="t4S-Wm-9sW"/>
                             <constraint firstAttribute="trailing" secondItem="0tm-qR-2SK" secondAttribute="trailing" constant="20" id="wJD-9f-ODT"/>
                             <constraint firstItem="0Lz-Sc-2Hm" firstAttribute="leading" secondItem="5tp-5r-hgB" secondAttribute="leading" id="xbI-fD-OUa"/>
                             <constraint firstAttribute="trailing" secondItem="g7s-EH-5VF" secondAttribute="trailing" constant="20" id="zNT-Wu-zVk"/>
@@ -158,6 +183,7 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="kIb-3T-kOh" id="nSc-bd-UE2"/>
                         <outlet property="humidityLabel" destination="0tm-qR-2SK" id="srk-RT-rtA"/>
+                        <outlet property="loadingView" destination="tVX-mp-m3f" id="pD3-7I-aft"/>
                         <outlet property="pressureLabel" destination="GDJ-Eo-OcK" id="kiX-VZ-alR"/>
                         <outlet property="tempMaxLabel" destination="UdJ-6X-OqH" id="iRc-UB-bsg"/>
                         <outlet property="tempMinLabel" destination="g7s-EH-5VF" id="TOe-3A-d6a"/>
