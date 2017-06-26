@@ -62,7 +62,7 @@
                             <constraint firstItem="wRT-mz-1CL" firstAttribute="leading" secondItem="kLU-BE-38y" secondAttribute="leading" id="uve-vr-tQj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Forecast" id="1y9-hH-JTV"/>
+                    <tabBarItem key="tabBarItem" title="Forecast" image="forecast" id="1y9-hH-JTV"/>
                     <connections>
                         <outlet property="collectionView" destination="74u-6A-aGi" id="PZp-R2-nRq"/>
                         <outlet property="loadingView" destination="Yg2-Ct-YFR" id="Sqi-Xs-IG5"/>
@@ -179,7 +179,7 @@
                             <constraint firstItem="ZiS-FA-obk" firstAttribute="top" secondItem="kIb-3T-kOh" secondAttribute="bottom" constant="10" id="zYL-R3-tH0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Current Weather" id="IKN-hm-mSp"/>
+                    <tabBarItem key="tabBarItem" title="Current Weather" image="current" id="IKN-hm-mSp"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="kIb-3T-kOh" id="nSc-bd-UE2"/>
                         <outlet property="humidityLabel" destination="0tm-qR-2SK" id="srk-RT-rtA"/>
@@ -213,4 +213,8 @@
             <point key="canvasLocation" x="-529" y="121"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="current" width="30" height="30"/>
+        <image name="forecast" width="40" height="40"/>
+    </resources>
 </document>
