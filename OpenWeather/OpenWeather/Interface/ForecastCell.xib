@@ -48,6 +48,12 @@
                 </subviews>
             </view>
             <size key="customSize" width="384" height="50"/>
+            <connections>
+                <outlet property="dateLabel" destination="laa-Bz-bcL" id="6HB-qj-lIk"/>
+                <outlet property="maxLabel" destination="Cix-pQ-CEX" id="FEq-sT-9Po"/>
+                <outlet property="minLabel" destination="Zu2-09-6Xw" id="PFx-LO-KKY"/>
+                <outlet property="temperatureLabel" destination="RSc-pI-9Oc" id="o9n-PO-yIX"/>
+            </connections>
             <point key="canvasLocation" x="222" y="54"/>
         </collectionViewCell>
     </objects>

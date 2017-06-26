@@ -9,10 +9,25 @@
 import UIKit
 
 class ForecastCell: UICollectionViewCell {
+    
+    var forecast:Forecast? {
+        didSet {
+            updateUI()
+        }
+    }
 
+    @IBOutlet weak var minLabel: UILabel!
+    @IBOutlet weak var maxLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func updateUI() {
+        
     }
 
 }

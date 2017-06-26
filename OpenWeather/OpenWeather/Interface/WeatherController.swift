@@ -58,4 +58,14 @@ class WeatherController: UIViewController {
         self.humidityLabel.text = "\(String(describing: weather.humidity))"
     }
 
+    @IBAction func didTapOnShareButton(_ sender: UIBarButtonItem) {
+        
+        // stuff to share here
+        
+        let controller = UIActivityViewController(activityItems: [], applicationActivities: nil)
+        controller.popoverPresentationController?.sourceView = self.view
+        controller.excludedActivityTypes = [.assignToContact, .addToReadingList, .openInIBooks, .print]
+        self.present(controller, animated: true, completion: nil)
+
+    }
 }

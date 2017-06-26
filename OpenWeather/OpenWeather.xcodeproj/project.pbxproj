@@ -103,8 +103,7 @@
 				2DF35D411F00347300C610C5 /* Dashboard.storyboard */,
 				2DF35D431F0034A500C610C5 /* WeatherController.swift */,
 				2DF35D451F0034B200C610C5 /* WeatherForecastController.swift */,
-				2DF35D4F1F00DFC100C610C5 /* ForecastCell.swift */,
-				2DF35D501F00DFC100C610C5 /* ForecastCell.xib */,
+				2DF35D551F00E48000C610C5 /* cells */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -144,6 +143,15 @@
 				2DF35D301EFF8A4900C610C5 /* Info.plist */,
 			);
 			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2DF35D551F00E48000C610C5 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				2DF35D4F1F00DFC100C610C5 /* ForecastCell.swift */,
+				2DF35D501F00DFC100C610C5 /* ForecastCell.xib */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 		CEAACD9300B3A6309CD20841 /* Pods */ = {

@@ -83,7 +83,13 @@
                                     <constraint firstAttribute="height" constant="64" id="wRQ-P8-CHy"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Mumbai, IN" id="1kN-Vm-OaN"/>
+                                    <navigationItem title="Mumbai, IN" id="1kN-Vm-OaN">
+                                        <barButtonItem key="rightBarButtonItem" title="Share" id="gU0-dS-3Bu">
+                                            <connections>
+                                                <action selector="didTapOnShareButton:" destination="USn-qV-oca" id="kWv-NC-aUY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiS-FA-obk">
