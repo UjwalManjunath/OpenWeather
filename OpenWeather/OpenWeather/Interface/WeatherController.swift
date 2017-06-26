@@ -49,7 +49,9 @@ class WeatherController: UIViewController {
         guard  let weather = self.weather else {
             return
         }
+        
         self.descriptionLabel.text = weather.weatherDescription
+        
         self.temperatureLabel.text = "\(String(describing: weather.temperature))"
         self.tempMaxLabel.text = "\(String(describing: weather.tempMax))"
         self.tempMinLabel.text = "\(String(describing: weather.tempMin))"

@@ -21,6 +21,7 @@
 		2DF35D511F00DFC100C610C5 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF35D4F1F00DFC100C610C5 /* ForecastCell.swift */; };
 		2DF35D521F00DFC100C610C5 /* ForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF35D501F00DFC100C610C5 /* ForecastCell.xib */; };
 		2DF35D541F00DFE500C610C5 /* UICollectionViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF35D531F00DFE500C610C5 /* UICollectionViewUtility.swift */; };
+		2DF35D571F01171C00C610C5 /* DateFormatterUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF35D561F01171C00C610C5 /* DateFormatterUtility.swift */; };
 		3FE9CAEE28FC6C9D4C955818 /* Pods_OpenWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAAA0D5033D033054D92338 /* Pods_OpenWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		2DF35D4F1F00DFC100C610C5 /* ForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		2DF35D501F00DFC100C610C5 /* ForecastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForecastCell.xib; sourceTree = "<group>"; };
 		2DF35D531F00DFE500C610C5 /* UICollectionViewUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewUtility.swift; sourceTree = "<group>"; };
+		2DF35D561F01171C00C610C5 /* DateFormatterUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterUtility.swift; sourceTree = "<group>"; };
 		4FAAA0D5033D033054D92338 /* Pods_OpenWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				2DF35D531F00DFE500C610C5 /* UICollectionViewUtility.swift */,
+				2DF35D561F01171C00C610C5 /* DateFormatterUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				2DF35D511F00DFC100C610C5 /* ForecastCell.swift in Sources */,
 				2DF35D541F00DFE500C610C5 /* UICollectionViewUtility.swift in Sources */,
 				2DF35D4E1F00412C00C610C5 /* ApplicationContext.swift in Sources */,
+				2DF35D571F01171C00C610C5 /* DateFormatterUtility.swift in Sources */,
 				2DF35D441F0034A500C610C5 /* WeatherController.swift in Sources */,
 				2DF35D4A1F003A3000C610C5 /* Weather.swift in Sources */,
 				2DF35D481F00368D00C610C5 /* ServiceManager.swift in Sources */,

@@ -21,7 +21,7 @@ class Forecast: NSObject {
     
     func updateWithDictionary(_ contentDictionary: [String : AnyObject]) {
         
-        guard let newDate = contentDictionary["dt"] as? Date,
+        guard let newDate = contentDictionary["dt"] as? TimeInterval,
             let newTemp = contentDictionary["temp"] as? [String:AnyObject]
         else {
             return
@@ -34,10 +34,32 @@ class Forecast: NSObject {
             return
         }
         
-        date = newDate
+        date = Date(timeIntervalSince1970: newDate)
         dayTemperature = newDayTemp
         tempMax = newTempMax
         tempMin = newTempMin
     }
     
+    func formattedDate() -> String {
+        if let dateString = DateFormatter.FormattedStringFromDate(date: self.date!) {
+            return dateString
+        }
+        return ""
+    }
+    
+    func temperatureInFahrenheit() -> String {
+        return "\(convertToFahrenheit(tempInKelvin: dayTemperature!))"
+    }
+    
+    func tempMaxInFahrenheit() -> String {
+        return "\(convertToFahrenheit(tempInKelvin: tempMax!))"
+    }
+    
+    func tempMinInFahrenheit() -> String {
+        return "\(convertToFahrenheit(tempInKelvin: tempMin!))"
+    }
+    
+    func convertToFahrenheit(tempInKelvin:Float) -> Float {
+        return tempInKelvin * (9.0/5.0) - 459.67
+    }
 }
