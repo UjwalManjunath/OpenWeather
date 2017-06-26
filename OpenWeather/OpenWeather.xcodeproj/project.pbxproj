@@ -201,6 +201,7 @@
 				TargetAttributes = {
 					2DF35D201EFF8A4900C610C5 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2ESYEZP2FM;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -416,7 +417,7 @@
 			baseConfigurationReference = 0D9147CFDC039639CE90BCFD /* Pods-OpenWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2ESYEZP2FM;
 				INFOPLIST_FILE = OpenWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -431,7 +432,7 @@
 			baseConfigurationReference = 0BD50F3D1FE9580B428D67AE /* Pods-OpenWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2ESYEZP2FM;
 				INFOPLIST_FILE = OpenWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
