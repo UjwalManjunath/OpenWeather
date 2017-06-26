@@ -69,9 +69,9 @@ class WeatherController: UIViewController {
         
         self.descriptionLabel.text = weather.weatherDescription?.capitalized
         
-        self.temperatureLabel.text = weather.temperatureInFahrenheit() + "\u{00B0}"
-        self.tempMaxLabel.text = "High : " + weather.tempMaxInFahrenheit() + "\u{00B0}"
-        self.tempMinLabel.text = " Low : " + weather.tempMinInFahrenheit() + "\u{00B0}"
+        self.temperatureLabel.text = weather.temperatureInFahrenheit()
+        self.tempMaxLabel.text = "High : " + weather.tempMaxInFahrenheit()
+        self.tempMinLabel.text = " Low : " + weather.tempMinInFahrenheit()
         
         self.pressureLabel.text = "Pressure : \(weather.pressure!) hPa"
         self.humidityLabel.text = "Humidity : \(weather.humidity!)%"
@@ -79,9 +79,19 @@ class WeatherController: UIViewController {
 
     @IBAction func didTapOnShareButton(_ sender: UIBarButtonItem) {
         
-        // stuff to share here
+        guard  let weather = self.weather else {
+            return
+        }
         
-        let controller = UIActivityViewController(activityItems: [], applicationActivities: nil)
+        let description = "Description :" + weather.weatherDescription!.capitalized
+        let temperature = "Temperature : " + weather.temperatureInFahrenheit()
+        let tempMax = "High : " + weather.tempMaxInFahrenheit()
+        let tempMin = "Low : " + weather.tempMaxInFahrenheit()
+        
+        let pressure = "Pressure : \(weather.pressure!) hPa"
+        let humidity = "Humidity : \(weather.humidity!)%"
+        
+        let controller = UIActivityViewController(activityItems: [description, temperature, tempMax, tempMin, pressure, humidity], applicationActivities: nil)
         controller.popoverPresentationController?.sourceView = self.view
         controller.excludedActivityTypes = [.assignToContact, .addToReadingList, .openInIBooks, .print]
         self.present(controller, animated: true, completion: nil)

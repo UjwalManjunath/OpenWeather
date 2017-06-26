@@ -30,9 +30,9 @@ class ForecastCell: UICollectionViewCell {
     
     func updateUI() {
         
-        self.minLabel.text = "High : " + forecast!.tempMinInFahrenheit() + "\u{00B0}"
-        self.maxLabel.text = " Low : " + forecast!.tempMaxInFahrenheit() + "\u{00B0}"
-        self.temperatureLabel.text = forecast!.temperatureInFahrenheit() + "\u{00B0}"
+        self.minLabel.text = "High : " + forecast!.tempMinInFahrenheit()
+        self.maxLabel.text = " Low : " + forecast!.tempMaxInFahrenheit()
+        self.temperatureLabel.text = forecast!.temperatureInFahrenheit()
         self.dateLabel.text = forecast!.formattedDate()
     }
 
