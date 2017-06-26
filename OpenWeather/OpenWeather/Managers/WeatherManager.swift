@@ -18,17 +18,9 @@ class WeatherManager: NSObject {
         super.init()
         self.serviceManager = serviceManager
     }
-    
-    // Parsing methods
-    
-    // parse current weather
 
-    // parse weather Forecast
-    
-    
-    
     //	Retrieve the current weather – “/weather?q=Mumbai,IN&APPID=APIKEY”
-    func fetchCurrentWeather() {
+    func fetchCurrentWeather(success:@escaping FetchSuccess, failure:@escaping FetchFailure) {
         
         let parameters:[String:AnyObject] = [
             "q":"Mumbai,IN" as AnyObject,
@@ -37,17 +29,21 @@ class WeatherManager: NSObject {
         
         let path = "weather"
         
-        self.serviceManager!.processRequest(path: path, parameters: parameters, completion: { (responseJSON) in
+        self.serviceManager?.processRequest(path: path, parameters: parameters, completion: { (responseJSON) in
             
-        }) { (error) in
+            let current = Weather()
+
+            if let json = responseJSON as? [String:AnyObject] {
+                current.updateWithDictionary(json)
+            }
             
-        }
-        
-        
+            success(current as AnyObject)
+
+        }, failure: failure)
     }
     
     //	Retrieve the forecast for Mumbai – “/forecast/daily?q= Mumbai,IN&cnt=7&appid=APIKEY”
-    func fetchWeatherForecast() {
+    func fetchWeatherForecast(success:@escaping FetchSuccess, failure:@escaping FetchFailure) {
         
         let parameters:[String:AnyObject] = [
             "q":"Mumbai,IN" as AnyObject,
@@ -57,12 +53,23 @@ class WeatherManager: NSObject {
         
         let path = "forecast/daily"
         
-        self.serviceManager!.processRequest(path: path, parameters: parameters, completion: { (responseJSON) in
+        self.serviceManager?.processRequest(path: path, parameters: parameters, completion: { (responseJSON) in
             
+            var weatherForecast:[Forecast] = []
+            if let json = responseJSON as? [String:AnyObject] {
+                if let lists = json["list"] as? [[String:AnyObject]] {
+                    
+                    for list in lists {
+                        let forecast = Forecast()
+                        forecast.updateWithDictionary(list)
+                        weatherForecast.append(forecast)
+                    }
+                }
+            }
             
-        }) { (error) in
-            
-        }
+            success(weatherForecast as AnyObject)
+
+        }, failure: failure)
     }
 
 }

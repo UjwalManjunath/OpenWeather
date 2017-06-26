@@ -23,7 +23,7 @@ class WeatherForecastController: UIViewController {
     
 
     func fetchWeatherForecast() {
-        ApplicationContext.currentContext?.weatherManager?.fetchWeatherForecast()
+        
     }
 
 }
