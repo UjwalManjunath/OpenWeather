@@ -59,7 +59,7 @@ class Forecast: NSObject {
         return "\(convertToFahrenheit(tempInKelvin: tempMin!))"
     }
     
-    func convertToFahrenheit(tempInKelvin:Float) -> Float {
-        return tempInKelvin * (9.0/5.0) - 459.67
+    func convertToFahrenheit(tempInKelvin:Float) -> Int {
+        return Int(tempInKelvin * (9.0/5.0) - 459.67)
     }
 }

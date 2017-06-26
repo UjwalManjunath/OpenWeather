@@ -53,8 +53,8 @@ class WeatherController: UIViewController {
         self.descriptionLabel.text = weather.weatherDescription?.capitalized
         
         self.temperatureLabel.text = weather.temperatureInFahrenheit() + "\u{00B0}"
-        self.tempMaxLabel.text = "High : " + weather.tempMaxInFahrenheit()
-        self.tempMinLabel.text = " Low : " + weather.tempMinInFahrenheit()
+        self.tempMaxLabel.text = "High : " + weather.tempMaxInFahrenheit() + "\u{00B0}"
+        self.tempMinLabel.text = " Low : " + weather.tempMinInFahrenheit() + "\u{00B0}"
         
         self.pressureLabel.text = "Pressure : \(weather.pressure!) hPa"
         self.humidityLabel.text = "Humidity : \(weather.humidity!)%"
