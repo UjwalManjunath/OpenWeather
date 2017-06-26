@@ -20,15 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRT-mz-1CL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="2Qp-1h-wOj"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Mumbai, IN" id="qbd-f1-ZJg"/>
-                                </items>
-                            </navigationBar>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Yg2-Ct-YFR">
                                 <rect key="frame" x="177" y="323" width="20" height="20"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,6 +39,15 @@
                                     <outlet property="delegate" destination="nW4-rr-dsx" id="E7l-6o-mdi"/>
                                 </connections>
                             </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRT-mz-1CL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="2Qp-1h-wOj"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Mumbai, IN" id="qbd-f1-ZJg"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
